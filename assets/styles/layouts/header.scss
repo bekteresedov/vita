@@ -1,0 +1,28 @@
+.header {
+  background-color: hsl(238, 57%, 41%);
+  color: $light-color;
+  border-bottom: 1px solid #2d3282;
+
+  .container {
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    @include flex-center(space-between, center);
+  }
+
+  .btn-container {
+    @include flex-center(flex-start, center);
+    column-gap: 8px;
+
+    .btn-start {
+      @include button-style($primary-color, #ffffff);
+      @include button-hover-style(#ffffff, #344054, #d0d5dd, all, 0.3s, ease);
+    }
+
+    .btn-call {
+      @include button-style(#eef4ff, $secondary-color, #eef4ff);
+      @include flex-center(center, center);
+      column-gap: 8px;
+    }
+  }
+}

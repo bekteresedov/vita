@@ -1,0 +1,60 @@
+.products {
+  h2 {
+    @include font-style(36px, 600, 44px, $dark-color);
+    text-align: center;
+  }
+
+  p {
+    @include font-style(20px, 400, 30px, $dark-color);
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .product-cards {
+    .product-card {
+      display: flex;
+      justify-content: center;
+      border: 1px solid $gray200;
+      border-radius: 16px;
+      margin-top: 60px;
+
+      .product-card-left {
+        padding: 32px;
+        position: relative;
+        h3 {
+          @include font-style(48px, 600, 60px, $dark-color);
+          margin-bottom: 20px;
+        }
+
+        p {
+          @include font-style(20px, 400, 30px, $dark-color);
+          margin-bottom: 20px;
+        }
+
+        .product-btn {
+          @include button-style(
+            $primary-color,
+            #fff,
+            $primary-color,
+            $box-shadow,
+            18px,
+            16px 28px,
+            28px
+          );
+          @include button-hover-style(
+            #ffffff,
+            #344054,
+            #d0d5dd,
+            all,
+            0.3s,
+            ease
+          );
+          margin-top: auto;
+          margin-top: 24px;
+          position: absolute;
+          bottom: 32px;
+        }
+      }
+    }
+  }
+}

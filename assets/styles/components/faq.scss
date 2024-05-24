@@ -1,0 +1,53 @@
+.faq {
+  h2 {
+    @include font-style(36px, 600, 44px, $dark-color, -0.02em, center);
+  }
+
+  h3 {
+    @include font-style(20px, 400, 30px, #667085, normal, center);
+    margin-top: 10px;
+  }
+
+  .faq-list {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 60px;
+
+    .faq-item {
+      padding: 20px 0;
+      border-top: 1px solid #eaecf0;
+
+      div {
+        @include flex-center(space-between, center);
+      }
+
+      p {
+        @include font-style(20px, 500, 28px, $dark-color);
+      }
+    }
+
+    .answer {
+      @include font-style(16px, 400, 24px, #667085);
+      padding-top: 3px;
+    }
+  }
+
+  .faq-footer {
+    background-color: $background-dark;
+    padding: 32px;
+    border-radius: 16px;
+    @include flex-center(space-between, center);
+
+    h4 {
+      @include font-style(20px, 500, 30px, $dark-color);
+    }
+
+    p {
+      @include font-style(18px, 400, 28px, #667085);
+    }
+
+    .faq-btn {
+      @include button-style($secondary-color, #fff, #eef4ff);
+    }
+  }
+}

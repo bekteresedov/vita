@@ -1,0 +1,85 @@
+.footer {
+  background-color: #2d31a6;
+
+  .footer-first {
+    background-color: #2d3282;
+    @include flex-center(space-between, center, row);
+    padding: 48px 45px;
+
+    h3 {
+      @include font-style(20px, 500, 30px, #ffffff);
+    }
+
+    h4 {
+      @include font-style(16px, 400, 24px, $light-color);
+      margin-top: 10px;
+    }
+
+    form {
+      @include flex-center(flex-start, center, row);
+
+      .input {
+        @include input-styles;
+      }
+
+      .btn-footer {
+        @include button-style(
+          $primary-color,
+          #fff,
+          $primary-color,
+          $box-shadow,
+          16px,
+          6px 20px,
+          28px,
+          8px
+        );
+        margin-top: 24px;
+        margin-left: 10px;
+        width: fit-content;
+        @include button-hover-style($secondary-color, #fff, $secondary-color);
+      }
+    }
+  }
+
+  .footer-second {
+    padding: 28px 50px;
+
+    .nav {
+      @include flex-center(flex-end, center, row);
+    }
+
+    div {
+      @include flex-center(space-between, center, row);
+
+      ul {
+        padding-top: 60px;
+        @include flex-center(flex-start, center, row);
+        column-gap: 20px;
+
+        li {
+          cursor: pointer;
+        }
+      }
+
+      p {
+        @include font-style(16px, 400, 24px, $light-color);
+      }
+    }
+
+    .end {
+      @include flex-center(flex-start, center, row);
+      border-top: 1px solid $primary-color;
+      margin-top: 60px;
+
+      p {
+        @include font-style(16px, 400, 24px, #a4bcfd);
+        padding-top: 60px;
+      }
+
+      li {
+        @include font-style(16px, 400, 24px, #a4bcfd);
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.hero-section {
+  @include flex-center(space-between, center);
+
+  h1 {
+    @include font-style(60px, 600, 72px, $dark-color, -0.02em, left);
+  }
+
+  .hero-image {
+    position: relative;
+    width: 811px;
+    height: 694px;
+  }
+
+  .tool-btn {
+    @include button-style(
+      $primary-color,
+      #fff,
+      $primary-color,
+      $box-shadow,
+      18px
+    );
+    @include flex-center(flex-start, center);
+    gap: 12px;
+    border-radius: 8px;
+    margin-top: 24px;
+
+    .tool-img-parent {
+      width: 19px;
+      height: 19px;
+      position: relative;
+    }
+  }
+}
+
+.cards {
+  border: 1px solid $gray200;
+  border-right: 0;
+  border-left: 0;
+  .category-cards {
+    margin-top: 60px;
+    @include flex-center(space-between, center);
+    padding: 64px 0;
+
+    .category-card {
+      @include flex-center(center, center, column);
+      @include font-style(18px, 600, 28px, #344054, normal, left);
+      background: #ffffff;
+      border: 1px solid #d0d5dd;
+      box-shadow: 0px 1px 2px 0px #1018280d;
+      padding: 16px 58px;
+      gap: 12px;
+      border-radius: 8px;
+      border: 1px 0px 0px 0px;
+    }
+  }
+}

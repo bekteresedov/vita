@@ -1,0 +1,35 @@
+//  "base/reset";
+@import "/assets/styles/base/reset.scss";
+
+//mixins
+@import "/assets/styles/utilities/variables.scss";
+@import "/assets/styles/utilities/mixins.scss";
+
+//header
+@import "./layouts/header.scss";
+
+//blogs
+@import "./components/blogs.scss";
+
+//faq
+@import "./components/faq.scss";
+
+//features
+@import "./components/features.scss";
+
+@import "./components/hero.scss";
+
+@import "./components/products.scss";
+
+@import "./components/testimonials.scss";
+
+@import "./components/contact.scss";
+
+@import "./components/location.scss";
+
+@import "./layouts/footer.scss";
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}

@@ -1,0 +1,84 @@
+@mixin flex-center($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin font-style(
+  $font-size,
+  $font-weight,
+  $line-height,
+  $color,
+  $letter-spacing: normal,
+  $text-align: left
+) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+  letter-spacing: $letter-spacing;
+  text-align: $text-align;
+}
+
+@mixin button-style(
+  $bg-color,
+  $text-color,
+  $border-color: $bg-color,
+  $box-shadow: $box-shadow,
+  $font-size: 16px,
+  $padding: 10px 18px,
+  $line-height: 24px,
+  $border-radius: 8px
+) {
+  background: $bg-color;
+  border: 1px solid $border-color;
+  box-shadow: $box-shadow;
+  color: $text-color;
+  border-radius: $border-radius;
+  padding: $padding;
+  font-size: $font-size;
+  font-weight: 600;
+  line-height: $line-height;
+  height: fit-content;
+  cursor: pointer;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+}
+
+@mixin button-hover-style(
+  $bg-color-hover,
+  $text-color-hover,
+  $border-color-hover,
+  $transition-property: all,
+  $transition-duration: 0.3s,
+  $transition-timing-function: ease
+) {
+  &:hover {
+    background: $bg-color-hover;
+    color: $text-color-hover;
+    border-color: $border-color-hover;
+    transition: $transition-property $transition-duration
+      $transition-timing-function;
+  }
+}
+
+@mixin input-styles {
+  height: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  outline: none;
+  color: #667085;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px 0px #1018280d;
+
+  &:focus {
+    border-color: #444ce7;
+  }
+}

@@ -1,0 +1,103 @@
+.blogs {
+  border: 1px solid $gray200;
+  border-right: 0;
+  border-left: 0;
+  padding: 96px 0;
+
+  .blog-head {
+    @include flex-center(space-between, flex-start);
+
+    h2 {
+      @include font-style(36px, 600, 44px, $dark-color, -0.02em);
+    }
+
+    p {
+      @include font-style(20px, 400, 30px, #475467);
+      margin-top: 10px;
+    }
+  }
+
+  .btn-blog-container {
+    @include flex-center(flex-start, center);
+
+    .btn-blog {
+      width: 50px;
+      height: 50px;
+      background: #ffffffe5;
+      border: 1px solid #eaecf0;
+      border-right: 1px solid $gray200;
+      cursor: pointer;
+
+      &.back {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      &.next {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+  }
+
+  .blog-cards {
+    @include flex-center(flex-start, flex-start);
+    column-gap: 32px;
+    overflow: hidden;
+  }
+
+  .blog-card {
+    width: 384px;
+    border: 1px solid #eaecf0;
+    border-radius: 16px;
+    height: 536px;
+    position: relative;
+
+    .blog-image {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    .blog-content {
+      padding: 22px;
+      margin-top: 10px;
+      @include flex-center(flex-start, flex-start, column);
+      row-gap: 10px;
+
+      div {
+        background: $background-light;
+        padding: 4px 12px 4px 4px;
+        border-radius: 16px;
+        width: fit-content;
+        @include flex-center(flex-start, center);
+        column-gap: 8px;
+
+        .blog-category {
+          background-color: #fff;
+          @include font-style(12px, 500, 18px, $secondary-color);
+          border-radius: 16px;
+          padding: 2px 8px;
+        }
+
+        .blog-read {
+          @include font-style(12px, 500, 18px, $secondary-color);
+        }
+      }
+
+      h2 {
+        @include font-style(24px, 600, 32px, $dark-color);
+        @include flex-center(space-between, center);
+      }
+
+      p {
+        @include font-style(16px, 400, 24px, #667085);
+      }
+
+      .blog-date {
+        @include font-style(14px, 400, 20px, #667085);
+        position: absolute;
+        bottom: 25px;
+      }
+    }
+  }
+}

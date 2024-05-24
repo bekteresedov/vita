@@ -1,0 +1,42 @@
+.features {
+  text-align: center;
+  padding: 96px;
+  border: 1px solid $gray200;
+  border-right: 0;
+  border-left: 0;
+
+  h2 {
+    @include font-style(36px, 600, 44px, $dark-color, -0.02em, center);
+  }
+
+  p {
+    @include font-style(20px, 400, 30px, #667085);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 16px;
+  }
+
+  .feature-cards {
+    margin-top: 40px;
+    @include flex-center(flex-start, flex-start);
+    flex-wrap: wrap;
+  }
+
+  .feature-card {
+    width: 50%;
+    margin-top: 20px;
+
+    h2 {
+      @include font-style(48px, 600, 60px, $primary-color, -0.02em, center);
+    }
+
+    h3 {
+      margin-top: 15px;
+      @include font-style(20px, 500, 20px, $dark-color, normal, center);
+    }
+
+    p {
+      @include font-style(16px, 400, 24px, #667085, normal, center);
+    }
+  }
+}
